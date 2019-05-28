@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>开始使用layui</title>
+  <link rel="stylesheet" href="static/css/layui.css">
+  <script src="static/layui.js"></script>
+  <style>
+	.footer {
+		padding: 30px 0;
+		line-height: 30px;
+		text-align: center;
+		color: #666;
+		font-weight: 300;
+	}
+	.footer-index p {
+		display: inline-block;
+		vertical-align: middle;
+		height: 50px;
+		padding-right: 10px;
+	}
+  </style>
+</head>
+<body>
+	<div class="layui-layout layui-layout-admin">
+		<div class='layui-header header'>
+			<ul class="layui-nav">
+			  <li class="layui-nav-item"><a class="logo" href="/">
+				  <img src="static/images/index.png" alt="layui" style="width:82px;height:31px">
+				</a>
+			  </li>
+			  <li class="layui-nav-item layui-this">
+				<a href="javascript:;">产品</a>
+				<dl class="layui-nav-child">
+				  <dd><a href="">选项1</a></dd>
+				  <dd><a href="">选项2</a></dd>
+				  <dd><a href="">选项3</a></dd>
+				</dl>
+			  </li>
+			  <li class="layui-nav-item"><a href="">大数据</a></li>
+			  <li class="layui-nav-item">
+				<a href="javascript:;">解决方案</a>
+				<dl class="layui-nav-child">
+				  <dd><a href="">移动模块</a></dd>
+				  <dd><a href="">后台模版</a></dd>
+				  <dd class="layui-this"><a href="">选中项</a></dd>
+				  <dd><a href="">电商平台</a></dd>
+				</dl>
+			  </li>
+			  <li class="layui-nav-item"><a href="">社区</a></li>
+			</ul>
+			<ul class="layui-nav layui-layout-right">
+			  <li class="layui-nav-item">
+				<a href="javascript:;">
+				  <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+				  峰采
+				</a>
+				<dl class="layui-nav-child">
+				  <dd><a href="">基本资料</a></dd>
+				  <dd><a href="">安全设置</a></dd>
+				</dl>
+			  </li>
+			  <li class="layui-nav-item"><a href="">退出</a></li>
+			</ul>
+		</div>
+		<div class="layui-side layui-bg-black">
+			<div class="layui-side-scroll">
+				<ul class="layui-nav layui-nav-tree layui-inline" lay-filter="demo" style="margin-right: 10px;">
+				  <li class="layui-nav-item layui-nav-itemed">
+					<a href="javascript:;">默认展开</a>
+					<dl class="layui-nav-child">
+					  <dd><a href="javascript:;">选项一</a></dd>
+					  <dd><a href="javascript:;">选项二</a></dd>
+					  <dd><a href="javascript:;">选项三</a></dd>
+					  <dd><a href="">跳转项</a></dd>
+					</dl>
+				  </li>
+				  <li class="layui-nav-item">
+					<a href="javascript:;">解决方案</a>
+					<dl class="layui-nav-child">
+					  <dd><a href="">移动模块</a></dd>
+					  <dd><a href="">后台模版</a></dd>
+					  <dd><a href="">电商平台</a></dd>
+					</dl>
+				  </li>
+				  <li class="layui-nav-item"><a href="">云市场</a></li>
+				  <li class="layui-nav-item"><a href="">社区</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="layui-body layui-tab-content" style="background-color: #eee">
+			<div class="layui-row layui-col-space15">
+				<div class="layui-col-md12">
+				  <div class="layui-card-body">
+						<div class="layui-tab layui-tab-card" lay-allowclose="true">
+						  <ul class="layui-tab-title">
+							<li class="layui-this">网站设置</li>
+							<li>用户基本管理</li>
+							<li>权限分配</li>
+							<li>商品管理</li>
+							<li>订单管理</li>
+							<li>订单管理1</li>
+						  </ul>
+						  <div class="layui-tab-content" style="height:390px; background-color:#ffffff">
+							<div class="layui-tab-item layui-show">
+								<form class="layui-form layui-form-pane">
+									<div class="layui-form-item">
+										<div class="layui-inline">
+											<label class="layui-form-label">姓名</label>
+											<div class="layui-input-inline">
+											  <input type="text" name="username" placeholder="请输入" autocomplete="off" class="layui-input">
+											</div>
+										</div>
+										<div class="layui-inline">
+											<label class="layui-form-label">性别</label>
+											<div class="layui-input-inline">
+											  <input type="text" name="username" placeholder="请输入" autocomplete="off" class="layui-input">
+											</div>
+										</div>
+										<div class="layui-inline">
+											<label class="layui-form-label">爱好</label>
+											<div class="layui-input-block">
+											  <select name="interest" lay-filter="aihao">
+												<option value="" selected="">请选择</option>
+												<option value="0">写作</option>
+												<option value="1">阅读</option>
+												<option value="2">游戏</option>
+												<option value="3">音乐</option>
+												<option value="4">旅行</option>
+											  </select>
+											</div>
+										</div>
+									</div>
+									<div class="layui-form-item">
+										<div class="layui-row">
+											<div style="float:right">
+											  <button type="button" class="layui-btn">查询</button>
+											  <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+											</div>
+										</div>
+									</div>
+								</form>
+								<table class="layui-hide" id="test" lay-filter="test"></table>
+							</div>
+							<div class="layui-tab-item">2</div>
+							<div class="layui-tab-item">3</div>
+							<div class="layui-tab-item">4</div>
+							<div class="layui-tab-item">5</div>
+							<div class="layui-tab-item">6</div>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="layui-footer footer footer-index" style="background-color: #f5f6f5">
+		  <div class="layui-main">
+			<p>© 2019 <a href="/">layui.com</a> MIT license</p>
+			<p>
+			  <a href="http://fly.layui.com/case/2019/" target="_blank">案例</a>
+			  <a href="http://fly.layui.com/jie/3147/" target="_blank">支持</a>
+			  <a href="javascript:;" site-event="contactInfo">联系</a>
+			  <a href="https://github.com/sentsin/layui/" target="_blank" rel="nofollow">GitHub</a>
+			  <a href="https://gitee.com/sentsin/layui" target="_blank" rel="nofollow">码云</a>
+			  <a href="http://fly.layui.com/jie/2461/" target="_blank">公众号</a>
+			  <a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">赣ICP备13006272号-2</a>
+			</p>
+		  </div>
+		</div>
+	</div>
+	<script>
+
+	function test(res){console.log(res)}
+	//一般直接写在一个js文件中
+	layui.use(['layer', 'form','element', 'table'], function(){
+	  var layer = layui.layer, form = layui.form, element = layui.element, table = layui.table;
+	  //监听导航点击
+	  element.on('nav(demo)', function(elem){
+		layer.msg(elem.text());
+	  });
+
+	  table.render({
+		 elem: '#test'
+		,even: true //开启隔行背景
+		,url:'http://localhost:8080/getList/'
+		,cols: [[
+		   {type:'checkbox'}
+		  ,{field:'id', align:'center', title: 'ID', sort: true}
+		  ,{field:'username', align:'center', title: '用户名'}
+		  ,{field:'sex', align:'center', title: '性别', sort: true}
+		  ,{field:'city', align:'center', title: '城市'}
+		  ,{field:'', align:'center', title: '操作', templet:function(res){
+			return "<a class='layui-btn layui-btn-primary layui-btn-xs' lay-event='detail'>查看</a>" +
+				    "<a class='layui-btn layui-btn-xs' lay-event='edit'>编辑</a>" +
+				    "<a class='layui-btn layui-btn-danger layui-btn-xs' lay-event='del'>删除</a>"
+		   }}
+		]]
+		,page: true
+	  });
+
+	  table.on('tool(test)', function(obj){
+		var data = obj.data;
+		switch(obj.event){
+			case 'detail':
+				console.log(obj.event);
+				console.log(obj.data)
+		}
+			
+		//标注选中样式
+		obj.tr.removeClass('layui-table-click');
+	  });
+	});
+	</script> 
+</body>
+</html>
